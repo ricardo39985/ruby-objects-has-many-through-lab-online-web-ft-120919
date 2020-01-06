@@ -1,3 +1,4 @@
+require "pry"
 class Appointment
   attr_reader :patient, :doctor, :date
   @@all = []
@@ -6,6 +7,7 @@ class Appointment
     @patient = patient
     @doctor = doctor
     @@all << self
+    binding.pry
   end
   def self.all
     @@all
